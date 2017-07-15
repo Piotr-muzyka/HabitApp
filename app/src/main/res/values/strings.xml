@@ -1,0 +1,23 @@
+<resources>
+
+    <!--Activity titles-->
+    <string name="app_name">HabitTracker</string>
+    <string name="editor_activity_title">Add a Habit</string>
+
+
+    <string name="action_save">Save</string>
+
+    <string name="category_overview">Overview</string>
+
+    <string name="category_influence">Gender</string>
+
+    <string name="category_measurement">Measurement</string>
+    <string name="unit_habit_time">min</string>
+
+    <!--Hints for EditText-->
+    <string name="hint_pet_name">Name</string>
+    <string name="hint_habit_time">Time spent</string>
+
+    <string name="influence_positive">Positive</string>
+    <string name="influence_negative">Negative</string>
+</resources>
