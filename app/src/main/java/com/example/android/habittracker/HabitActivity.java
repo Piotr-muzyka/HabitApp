@@ -35,11 +35,11 @@ public class HabitActivity extends AppCompatActivity {
     @Override
     protected void onStart(){
         super.onStart();
-        displayDatabaseInfo();
+        readCursor(displayDatabaseInfo());
     }
 
     // method which allows to display actual Table contents after update.
-    private void displayDatabaseInfo() {
+    private Cursor displayDatabaseInfo() {
         habitDbHelper mDbHelper = new habitDbHelper(this);
 
         // Create and/or open a database to read from it
@@ -53,6 +53,11 @@ public class HabitActivity extends AppCompatActivity {
         };
 
         Cursor cursor = db.query(habitContract.habitEntry.TABLE_NAME, project, null, null, null, null, null);
+
+        return cursor;
+    }
+
+    private void readCursor(Cursor cursor) {
         TextView displayView = (TextView) findViewById(R.id.text_view_habit);
 
         try {
@@ -74,7 +79,7 @@ public class HabitActivity extends AppCompatActivity {
         } finally {
             cursor.close();
         }
-
     }
+
 }
 
